@@ -19,6 +19,10 @@ def pregunta_01():
 
     import matplotlib.pyplot as plt 
     import pandas as pd 
+    import os
+
+    if not os.path.exists("files/plots"):
+        os.makedirs("files/plots")
 
     plt.Figure()
 
@@ -94,3 +98,9 @@ def pregunta_01():
     plt.tight_layout()
     plt.savefig("files/plots/news.png")
     plt.show()
+
+if __name__ == "__main__":
+    pregunta_01()
+    
+    
+
